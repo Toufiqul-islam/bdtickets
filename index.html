@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <input type="text" id="fromInput" placeholder="From">
+    <ul id="fromSuggestions" class="suggestions"></ul>
+
+    <input type="text" id="toInput" placeholder="To">
+    <ul id="toSuggestions" class="suggestions"></ul>
+
+    <input type="date" id="dateInput" placeholder="Date">
+    <button id="swapButton">&#8596;</button>
+    <button id="searchButton">Search</button>
+
+    <div id="busList"></div>
+    <p id="noResultsMessage" style="display: none;">No buses are available.</p>
+    <div id="loader" style="display: none;">Loading...</div>
+
+</body>
+</html>
