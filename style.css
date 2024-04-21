@@ -1,15 +1,29 @@
 .background{
-  background-image: url("./image/banner-web.png");
   background-repeat: no-repeat;
   background-size:auto;
+  position: relative;
+}
+.background>img{
+  width: 100%;
+  height: 500px;
 }
 .nav{
+  background-color: #ffffff54;
+  position:absolute;
+  top:0px;
+  width: 100%;
+  
+}
+.navi{
   display: flex;
   justify-content: space-between;
-  padding-left:15% ;
-  padding-right: 15%;
-  background-color: #f0f0f067;
-  margin-bottom: 80px;
+  justify-content: center;
+  max-height: 1450px;
+}
+.position{
+  position:absolute;
+  top:120px;
+  left: 20%;
 
 }
 .logo{
@@ -112,8 +126,191 @@
 
 .iconb{
   display: flex;
+  justify-content: center;
+}
+.iconb>.one{
+  padding-top: 20px;
+  padding-left: 20px;
+  background-color: #FFFFFF;
+  border-top-left-radius: 15px;
+}
+.iconb>.two{
+  padding: 20px 0px 20px 0px;
+  background-color: #FFFFFF;
+}
+.iconb>.three{
+  padding: 20px 0px 20px 0px;
+  background-color: #FFFFFF;
+}
+.iconb>.four{
+  padding: 20px 20px 20px 0px;
+  background-color: #FFFFFF;
+  border-top-right-radius: 15px;
 }
 
+
+.iconb>.one>div{
+  display:flex;
+  padding: 5px;
+  border-style: solid;
+  border-color: #e30b13;
+  background-color: #e30b13;
+  border-width: 1px;
+  width: 100px;
+  justify-content: center;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.iconb>.two>div{
+  display:flex;
+  padding: 5px;
+  border-style: solid;
+  border-color: #e30b13;
+  border-width: 1px;
+  width: 100px;
+  justify-content: center;
+}
+.iconb>.three>div{
+  display:flex;
+  padding: 5px;
+  border-style: solid;
+  border-color: #e30b13;
+  border-width: 1px;
+  width: 100px;
+  justify-content: center;
+}
+.iconb>.four>div{
+  display:flex;
+  padding: 5px;
+  border-style: solid;
+  border-color: #e30b13;
+  border-width: 1px;
+  width: 100px;
+  justify-content: center;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.iconb>.one>div>i{
+  color: #FFFFFF !important;
+
+}
+.iconb>.ic>div>i{
+  font-size: 16px;
+  margin: 5px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.718);
+
+}
+
+.iconb>.one>div>p{
+  color: #FFFFFF !important;
+}
+
+.iconb>.ic>div>p{
+  font-size: 16px;
+  margin: 5px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.751);
+}
+
+.ticket{
+  display: flex;
+  justify-content: center;
+}
+.tofrom{
+  display:flex;
+  background-color: #FFFFFF;
+  padding-top:20px;
+  padding-left: 20px;
+  border-top-left-radius: 15px;
+}
+
+.to{
+  padding: 5px;
+  border-style: solid;
+  border-color: #e30b13;
+  border-width: 1px 0px 1px 1px;
+  justify-content: center;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-right: 100px;
+  width: 20%;
+}
+.from{
+  padding: 5px;
+  border-style: solid;
+  border-color: #e30b13;
+  border-width: 1px 1px 1px 0px;
+  justify-content: center;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-left: 50px;
+  padding-right: 100px;
+  width: 20%;
+  margin-right: 20px;
+}
+
+.iconm{
+  padding-top: 25px;
+  width: 100px;
+  left: 50%;
+  border-style: solid;
+  border-color: #e30b13;
+  border-width: 1px 0px 1px 0px;
+}
+.iconm>i{
+  font-size: 30px;
+  border-style: solid;
+  border-color: #e30b13;
+  border-width: 1px;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.date{
+  display:flex;
+  background-color: #FFFFFF;
+  padding-top:20px;
+  padding-left: 20px;
+  border-top-right-radius: 15px;
+}
+.tod{
+  padding: 5px;
+  border-style: solid;
+  border-color: #e30b13;
+  border-width: 1px 0px 1px 1px;
+  justify-content: center;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-right: 100px;
+  width: 20%;
+}
+.fromd{
+  padding: 5px;
+  border-style: solid;
+  border-color: #e30b13;
+  border-width: 1px 1px 1px 1px;
+  justify-content: center;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-left: 50px;
+  padding-right: 100px;
+  width: 20%;
+  margin-right: 20px;
+}
+.city{
+  background-color: #FFFFFF;
+  padding: 30px 30px 30px;
+}
+.city>button{
+  border:none;
+  margin: 5px 20px 5px 20px;
+  background-color: #e30b13;
+}
+.city>button>p{
+
+}
 
 li{
   list-style-type:none;
