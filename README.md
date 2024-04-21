@@ -1,2 +1,1 @@
 # slider-with-Javascript
-# bdtickets

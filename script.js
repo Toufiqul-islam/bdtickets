@@ -1,79 +1,60 @@
-const fromInput = document.getElementById('fromInput');
-const toInput = document.getElementById('toInput');
-const dateInput = document.getElementById('dateInput');
-const fromSuggestions = document.getElementById('fromSuggestions');
-const toSuggestions = document.getElementById('toSuggestions');
-const swapButton = document.getElementById('swapButton');
-const searchButton = document.getElementById('searchButton');
-const busList = document.getElementById('busList');
-const noResultsMessage = document.getElementById('noResultsMessage');
-const loader = document.getElementById('loader');
+// Sample data for suggestions
+const sourceData = ['New York', 'Los Angeles', 'Chicago', 'San Francisco', 'Seattle'];
+const destinationData = ['Miami', 'Boston', 'Washington DC', 'Atlanta', 'Las Vegas'];
 
-const fromData = ['City A', 'City B', 'City C']; // Sample data for 'From' input
-const toData = ['City X', 'City Y', 'City Z']; // Sample data for 'To' input
+// Function to filter suggestions based on input text
+function filterSuggestions(inputText, dataList) {
+  return dataList.filter(item => item.toLowerCase().includes(inputText.toLowerCase()));
+}
 
-// Function to filter suggestions
-function filterSuggestions(input, suggestions, data) {
-    const inputValue = input.value.toLowerCase();
-    const filteredData = data.filter(item => item.toLowerCase().includes(inputValue));
-    suggestions.innerHTML = ''; // Clear previous suggestions
-    filteredData.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = item;
-        li.addEventListener('click', () => {
-            input.value = item;
-            suggestions.innerHTML = ''; // Clear suggestions after selection
-        });
-        suggestions.appendChild(li);
+// Function to populate suggestion list
+function populateSuggestions(inputElement, suggestionList, dataList) {
+  const inputText = inputElement.value;
+  const filteredData = filterSuggestions(inputText, dataList);
+  suggestionList.innerHTML = '';
+  filteredData.forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = item;
+    li.addEventListener('click', function() {
+      inputElement.value = item;
+      suggestionList.innerHTML = '';
     });
+    suggestionList.appendChild(li);
+  });
 }
 
-// Event listener for 'From' input
-fromInput.addEventListener('input', () => {
-    filterSuggestions(fromInput, fromSuggestions, fromData);
+// Event listeners for input fields
+document.getElementById('sourceInput').addEventListener('input', function() {
+  populateSuggestions(this, document.getElementById('sourceSuggestions'), sourceData);
 });
 
-// Event listener for 'To' input
-toInput.addEventListener('input', () => {
-    filterSuggestions(toInput, toSuggestions, toData);
+document.getElementById('sourceInput').addEventListener('click', function() {
+  populateSuggestions(this, document.getElementById('sourceSuggestions'), sourceData);
 });
 
-// Event listener for swap button
-swapButton.addEventListener('click', () => {
-    const temp = fromInput.value;
-    fromInput.value = toInput.value;
-    toInput.value = temp;
+document.getElementById('destinationInput').addEventListener('input', function() {
+  populateSuggestions(this, document.getElementById('destinationSuggestions'), destinationData);
 });
 
-// Event listener for search button
-searchButton.addEventListener('click', () => {
-    // Show loader
-    loader.style.display = 'block';
-    
-    // Simulate fetching bus data (replace with actual API call)
-    setTimeout(() => {
-        const busData = []; // Replace with fetched data
-        displayBusList(busData);
-    }, 2000); // Simulating a delay of 2 seconds
+document.getElementById('destinationInput').addEventListener('click', function() {
+  populateSuggestions(this, document.getElementById('destinationSuggestions'), destinationData);
 });
 
-// Function to display bus list
-function displayBusList(data) {
-    // Hide loader
-    loader.style.display = 'none';
-    
-    // Clear previous results
-    busList.innerHTML = '';
-    
-    if (data.length === 0) {
-        // Show "No buses available" message
-        noResultsMessage.style.display = 'block';
-    } else {
-        // Populate bus list
-        data.forEach(bus => {
-            const busItem = document.createElement('div');
-            busItem.textContent = `Date: ${bus.date}, Time: ${bus.time}, Fare: ${bus.fare}`;
-            busList.appendChild(busItem);
-        });
-    }
-}
+
+
+const item1 = document.getElementById('item1');
+const item2 = document.getElementById('item2');
+const arrowLeft = document.getElementById('arrowLeft');
+const arrowRight = document.getElementById('arrowRight');
+
+arrowLeft.addEventListener('click', () => {
+    const temp = item1.innerHTML;
+    item1.innerHTML = item2.innerHTML;
+    item2.innerHTML = temp;
+});
+
+arrowRight.addEventListener('click', () => {
+    const temp = item2.innerHTML;
+    item2.innerHTML = item1.innerHTML;
+    item1.innerHTML = temp;
+});
