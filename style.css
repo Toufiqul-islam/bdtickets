@@ -1,6 +1,120 @@
 .background{
   background-image: url("./image/banner-web.png");
+  background-repeat: no-repeat;
+  background-size:auto;
 }
+.nav{
+  display: flex;
+  justify-content: space-between;
+  padding-left:15% ;
+  padding-right: 15%;
+  background-color: #f0f0f067;
+  margin-bottom: 80px;
+
+}
+.logo{
+  margin: 8px;
+}
+.logo>img{
+  width: 150px;
+}
+.icons{
+  display:flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.icons>div{
+  display:flex;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.icons>div>i{
+  font-size: 16px;
+  margin: 5px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.718);
+
+}
+.icons>div>p{
+  font-size: 16px;
+  margin: 5px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.751);
+}
+.buttons{
+  display:flex;
+}
+
+.button1{
+  display:flex;
+  margin: 10px;
+  border-radius: 10px;
+  border-color: #E31112;
+  background-color: #E31112;
+  height: 45px;
+
+}
+.button1>div>i{
+  font-size: 15px;
+  margin-top: 12px;
+  margin-bottom: 0px;
+  color: #FFFFFF;
+}
+
+.button1>div>p{
+  font-size: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top:0px;
+  margin-bottom: 0px;
+  font-weight: 600;
+  color: #FFFFFF
+}
+.button1>div>p>span{
+  font-size: 10px;
+}
+
+.button2{
+  display:flex;
+  margin: 10px;
+  border-radius: 10px;
+  border-color: #E31112;
+  height:45px;
+
+}
+.button2>i{
+  font-size: 15px;
+  margin-top:10px;
+  margin-right: 15px;
+  color: #e30b13;
+}
+
+.button2>p{
+  font-size: 15px;
+  font-weight:600;
+  margin-top: 10px;
+  color: #f31c34;
+}
+
+.endicon{
+  display: flex;
+  margin-top: 8px;
+}
+.endicon>i{
+  margin: 15px 8px 15px 20px;
+  color: rgba(0, 0, 0, 0.562);
+}
+.endicon>p{
+  color: rgba(0, 0, 0, 0.664);
+  font-size: 15px;
+}
+
+
+.iconb{
+  display: flex;
+}
+
+
 li{
   list-style-type:none;
 }
