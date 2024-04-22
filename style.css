@@ -2,6 +2,7 @@
   background-repeat: no-repeat;
   background-size:auto;
   position: relative;
+  margin-bottom: 600px;
 }
 .background>img{
   width: 100%;
@@ -23,14 +24,19 @@
 .position{
   position:absolute;
   top:140px;
-  left: 20%;
+  left: 23%;
+  right: 23%;
 
 }
 .logo{
   margin: 8px;
 }
-.logo>img{
+.logo>.alt{
   width: 150px;
+}
+.logo>.alt1{
+  width:150px;
+  opacity: 0;
 }
 .icons{
   display:flex;
@@ -41,6 +47,12 @@
   display:flex;
   margin-left: 10px;
   margin-right: 10px;
+}
+.icons>div>i:hover{
+  color: #e30b13;
+}
+.icons>div>p:hover{
+  color: #e30b13;
 }
 .icons>div>i{
   font-size: 16px;
@@ -134,10 +146,12 @@
   background-color: #FFFFFF;
   border-top-left-radius: 15px;
 }
+
 .iconb>.two{
   padding: 20px 0px 20px 0px;
   background-color: #FFFFFF;
 }
+
 .iconb>.three{
   padding: 20px 0px 20px 0px;
   background-color: #FFFFFF;
@@ -147,6 +161,7 @@
   background-color: #FFFFFF;
   border-top-right-radius: 15px;
 }
+
 
 
 .iconb>.one>div{
@@ -161,6 +176,9 @@
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
+.iconb>.one>div:hover{
+  background-color:#fbddde ;
+}
 .iconb>.two>div{
   display:flex;
   padding: 5px;
@@ -170,6 +188,9 @@
   width: 100px;
   justify-content: center;
 }
+.iconb>.two>div:hover{
+  background-color:#fbddde ;
+}
 .iconb>.three>div{
   display:flex;
   padding: 5px;
@@ -178,6 +199,9 @@
   border-width: 1px 0px 1px 1px;
   width: 100px;
   justify-content: center;
+}
+.iconb>.three>div:hover{
+  background-color:#fbddde ;
 }
 .iconb>.four>div{
   display:flex;
@@ -190,10 +214,13 @@
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+.iconb>.four>div:hover{
+  background-color:#fbddde ;
+}
 
-.iconb>.one>div>i{
-  color: #FFFFFF !important;
 
+.iconb>.one>div>i:hover{
+  color: black !important;
 }
 .iconb>.ic>div>i{
   font-size: 16px;
@@ -203,9 +230,6 @@
 
 }
 
-.iconb>.one>div>p{
-  color: #FFFFFF !important;
-}
 
 .iconb>.ic>div>p{
   font-size: 16px;
@@ -347,19 +371,22 @@
 .city{
   background-color: #FFFFFF;
   position:relative;
-  padding-bottom: 30px 0px 50px 0px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .city>button{
   border:none;
-  margin: 20px 10px 50px 10px;
+  margin: 20px 0px 50px 0px;
   background-color: #f9f4fe;
   padding: 7px 15px 7px 15px;
   color: rgba(0, 0, 0, 0.767);
 
 }
 .city>label{
-  padding-left: 30px;
+  padding: 25px;
   color: rgba(0, 0, 0, 0.753);
 }
 
@@ -413,4 +440,75 @@ li{
   background-color: #f0f0f0;
 }
 
+@media only screen and (min-width:600px){
 
+}
+
+@media only screen and (max-width:900px){
+  .icons{
+    display:none;
+  }
+  .button1>div>p>span{
+    display: none;
+    padding:5px;
+  }
+  .button2{
+    display:none;
+  }
+  .endicon{
+    display:none;
+  }
+  .navi{
+    justify-content: space-between;
+    padding: 20px 80px 20px 80px;
+  }
+  .nav{
+    background-color:rgba(255, 255, 255, 0);
+  }
+  .background>img{
+    width: 100%;
+    height: 300px;
+  }
+  .position{
+    top:250px;
+    width: 100%;
+    left: 0%;
+  }
+  .city{
+    display: none;
+  }
+  .ticket{
+    display: inline;
+    width: 100%;
+    padding-right:5%;
+    padding-top: 5%;
+
+    position:absolute;
+    background-color: aqua;
+  }
+  .iconb>.ic{
+    padding-top: 20px;
+    padding-left: 20px;
+    background-color:rgba(255, 255, 255, 0);
+    border-top-left-radius: 15px;
+  }
+  .iconb>.ic>div{
+    background-color: #FFFFFF;
+    border-style: none;
+    display: block;
+    border-radius: 10px;
+    justify-content: center;
+    width: 65px;
+  }
+  .iconb>.ic>div>i{
+    justify-content: center;
+    padding: 10px 10px 0px 15px;
+  }
+  .iconb>.ic>div>p{
+    padding: 0px 10px 10px 10px;
+  }
+  .tofrom{
+    background-color: rgba(255, 119, 255, 0);
+  }
+  
+}
