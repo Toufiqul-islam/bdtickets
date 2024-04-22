@@ -22,7 +22,7 @@
 }
 .position{
   position:absolute;
-  top:120px;
+  top:140px;
   left: 20%;
 
 }
@@ -166,7 +166,7 @@
   padding: 5px;
   border-style: solid;
   border-color: #e30b13;
-  border-width: 1px;
+  border-width: 1px 0px 1px 1px;
   width: 100px;
   justify-content: center;
 }
@@ -175,7 +175,7 @@
   padding: 5px;
   border-style: solid;
   border-color: #e30b13;
-  border-width: 1px;
+  border-width: 1px 0px 1px 1px;
   width: 100px;
   justify-content: center;
 }
@@ -224,49 +224,79 @@
   padding-top:20px;
   padding-left: 20px;
   border-top-left-radius: 15px;
+  position: relative;
 }
 
 .to{
   padding: 5px;
   border-style: solid;
   border-color: #e30b13;
-  border-width: 1px 0px 1px 1px;
+  border-width: 1px 1px 1px 1px;
   justify-content: center;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  padding-right: 100px;
-  width: 20%;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  padding-top: 7px;
+  width: 200px;
 }
+
+.to>button{
+  font-size: 10px;
+  font-weight: 500;
+  border: none;
+  background-color: #FFFFFF;
+
+}
+.to>input{
+  border: none;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.884);
+}
+.iconm{
+  padding-top: 25px;
+  position:absolute;
+  z-index: 2;
+  right: 233px;
+  top:2px;
+  position: absolute;
+
+}
+.iconm>i{
+  font-size: 25px;
+  border-style: solid;
+  border-color: #e30b13;
+  border-width: 1px;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #FFFFFF;
+}
+
 .from{
-  padding: 5px;
+  padding: 5px 0px 10px 40px ;
   border-style: solid;
   border-color: #e30b13;
   border-width: 1px 1px 1px 0px;
   justify-content: center;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  padding-left: 50px;
-  padding-right: 100px;
-  width: 20%;
   margin-right: 20px;
 }
 
-.iconm{
-  padding-top: 25px;
-  width: 100px;
-  left: 50%;
-  border-style: solid;
-  border-color: #e30b13;
-  border-width: 1px 0px 1px 0px;
+.from>button{
+  font-size: 10px;
+  font-weight: 500;
+  border: none;
+  background-color: #FFFFFF;
+
 }
-.iconm>i{
-  font-size: 30px;
-  border-style: solid;
-  border-color: #e30b13;
-  border-width: 1px;
-  border-radius: 50%;
-  padding: 10px;
+.from>input{
+  border: none;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.884);
 }
+
 
 .date{
   display:flex;
@@ -276,44 +306,84 @@
   border-top-right-radius: 15px;
 }
 .tod{
-  padding: 5px;
+  padding: 5px 20px 5px 15px;
   border-style: solid;
   border-color: #e30b13;
   border-width: 1px 0px 1px 1px;
   justify-content: center;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  padding-right: 100px;
-  width: 20%;
 }
+.tod>button{
+  border: none;
+  background-color: #FFFFFF;
+  font-size: 10px;
+  font-weight: 500;
+}
+.tod>input{
+  border: none;
+  background-color: #FFFFFF;
+  font-size: 15px;
+}
+
 .fromd{
   padding: 5px;
   border-style: solid;
   border-color: #e30b13;
   border-width: 1px 1px 1px 1px;
-  justify-content: center;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  padding-left: 50px;
-  padding-right: 100px;
-  width: 20%;
   margin-right: 20px;
 }
+.fromd>button{
+  font-size: 10px;
+  font-weight: 500;
+  width: 150px;
+  border: none;
+  background-color: #FFFFFF;
+  justify-content: left;
+}
+
 .city{
   background-color: #FFFFFF;
-  padding: 30px 30px 30px;
+  position:relative;
+  padding-bottom: 30px 0px 50px 0px;
 }
+
 .city>button{
   border:none;
-  margin: 5px 20px 5px 20px;
-  background-color: #e30b13;
-}
-.city>button>p{
+  margin: 20px 10px 50px 10px;
+  background-color: #f9f4fe;
+  padding: 7px 15px 7px 15px;
+  color: rgba(0, 0, 0, 0.767);
 
+}
+.city>label{
+  padding-left: 30px;
+  color: rgba(0, 0, 0, 0.753);
+}
+
+.bbutton{
+  position:absolute;
+  left: 42%;
+  bottom: -25px;
+
+}
+.bbutton>button{
+  background-color: #e30b13;
+  color: #FFFFFF;
+  border: none;
+  padding: 15px 30px 15px 30px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 400;
+
+  
 }
 
 li{
   list-style-type:none;
+  border-color: none;
 }
 .search-container {
   position: relative;
@@ -327,7 +397,7 @@ li{
   width: 100%;
   max-height: 150px; /* Adjust as needed */
   overflow-y: auto;
-  border: 1px solid #ccc;
+  border: 1px solid #FFFFFF;
   border-top: none;
   border-radius: 0 0 5px 5px;
   background-color: #fff;
