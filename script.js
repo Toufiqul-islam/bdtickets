@@ -1,6 +1,67 @@
+const data = [
+  {
+      "from": "Dhaka",
+      "to": "Chittagong",
+      "fare": 1100,
+      "date":"11-06-24"
+  },
+  {
+      "from": "Dhaka",
+      "to": "Chittagong",
+      "fare": 1100,
+      "date":"30-04-24"
+  },
+  {
+      "from": "Dhaka",
+      "to": "Chittagong",
+      "fare": 1100,
+      "date":"01-05-24"
+  },
+  {
+      "from": "Barisal",
+      "to": "Chittagong",
+      "fare": 900,
+      "date":"11-05-24"
+  },
+  {
+      "from": "Barisal",
+      "to": "Chittagong",
+      "fare": 1200,
+      "date":"21-05-24"
+  },
+  {
+      "from": "Barisal",
+      "to": "Chittagong",
+      "fare": 900,
+      "date":"14-05-24"
+  },
+  {
+      "from": "Barisal",
+      "to": "Rajshahi",
+      "fare": 1900,
+      "date":"28-04-24"
+  },
+  {
+      "from": "Barisal",
+      "to": "Rajshahi",
+      "fare": 1900,
+      "date":"02-05-24"
+  }
+];
+
+const separatedData = {};
+data.forEach(item => {
+  if (!separatedData[item.from]) {
+      separatedData[item.from] = [];
+  }
+  separatedData[item.from].push(item);
+});
+
+console.log(separatedData);
+
 // Sample data for suggestions
-const sourceData = ['New York', 'Los Angeles', 'Chicago', 'San Francisco', 'Seattle'];
-const destinationData = ['Miami', 'Boston', 'Washington DC', 'Atlanta', 'Las Vegas'];
+const sourceData = ['Dhaka', 'Barisal', 'Rajshahi', 'Chittagong', ];
+const destinationData = ['Dhaka', 'Barisal', 'Rajshahi', 'Chittagong', ];
 
 // Function to filter suggestions based on input text
 function filterSuggestions(inputText, dataList) {

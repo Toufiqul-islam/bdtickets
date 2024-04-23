@@ -239,7 +239,7 @@
 }
 
 .ticket{
-  display: flex;
+  display: inline-flex;
   justify-content: center;
 }
 .tofrom{
@@ -263,7 +263,7 @@
   padding-left: 20px;
   padding-bottom: 10px;
   padding-top: 7px;
-  width: 200px;
+  width: 15%;
 }
 
 .to>button{
@@ -282,9 +282,8 @@
   padding-top: 25px;
   position:absolute;
   z-index: 2;
-  right: 233px;
+  right: 45.7%;
   top:2px;
-  position: absolute;
 
 }
 .iconm>i{
@@ -306,6 +305,7 @@
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   margin-right: 20px;
+  width: 15%;
 }
 
 .from>button{
@@ -348,6 +348,7 @@
   border: none;
   background-color: #FFFFFF;
   font-size: 15px;
+  
 }
 
 .fromd{
@@ -365,7 +366,8 @@
   width: 150px;
   border: none;
   background-color: #FFFFFF;
-  justify-content: left;
+  text-align: left;
+  padding-left: 30px;
 }
 
 .city{
@@ -382,6 +384,7 @@
   margin: 20px 0px 50px 0px;
   background-color: #f9f4fe;
   padding: 7px 15px 7px 15px;
+  border-radius: 10px;
   color: rgba(0, 0, 0, 0.767);
 
 }
@@ -444,7 +447,7 @@ li{
 
 }
 
-@media only screen and (max-width:900px){
+@media only screen and (max-width:1020px){
   .icons{
     display:none;
   }
@@ -475,16 +478,24 @@ li{
     left: 0%;
   }
   .city{
+    top:230px;
+    right:2.5%;
+  }
+  .city>button{
     display: none;
+  }
+  .city>label{
+    display:none;
+  }
+  .cuty>.bbutton>button{
+    width: 5%;
   }
   .ticket{
     display: inline;
     width: 100%;
-    padding-right:5%;
-    padding-top: 5%;
-
+    padding: 5% 0px 6% 0%;
     position:absolute;
-    background-color: aqua;
+    background-color: rgba(0, 81, 255, 0.068);
   }
   .iconb>.ic{
     padding-top: 20px;
@@ -498,17 +509,59 @@ li{
     display: block;
     border-radius: 10px;
     justify-content: center;
-    width: 65px;
+    width: 40px;
+    box-shadow: 2px 4px 5px 7px #8888883f;
   }
   .iconb>.ic>div>i{
     justify-content: center;
-    padding: 10px 10px 0px 15px;
+    padding: 0px 5px 0px 5px;
+    color: #e30b13;
+    font-weight: 600;
   }
   .iconb>.ic>div>p{
-    padding: 0px 10px 10px 10px;
+    padding: 0px 5px 0px 3px;
+    font-size: 10px;
   }
   .tofrom{
     background-color: rgba(255, 119, 255, 0);
+    padding: 0% 5% 0% 5%;
   }
-  
+  .to>button{
+    background-color: rgba(0, 255, 255, 0);
+  }
+  .to>input{
+    background-color: #ffffff00;
+  }
+  .iconm>i{
+    background-color:#eef3ff
+  }
+  .iconm{
+    left: 46.6%;
+    top: 0px;
+  }
+  .from>button{
+    background-color: #ffffff00;
+  }
+  .from>input{
+    background-color: #ffffff00;
+  }
+  .date{
+    background-color: #ffffff00;
+    padding: 3% 5% 3% 5%;
+  }
+  .tod{
+    width: 95%;
+  }
+  .tod>button{
+    background-color: #ffffff00;
+  }
+  .tod>input{
+    background-color: #ffffff00;
+  }
+  .fromd{
+    width: 100%;
+  }
+  .fromd>button{
+    background-color: #ffffff00;
+  }
 }
